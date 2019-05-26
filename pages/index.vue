@@ -9,28 +9,32 @@
         My priceless Nuxt.js project
       </h2>
       <div class="links">
-        <a href="https://nuxtjs.org/" target="_blank" class="button--green"
-          >Documentation</a
-        >
+        <a href="https://nuxtjs.org/" target="_blank" c lass="button--green">
+          Documentation
+        </a>
         <a
           href="https://github.com/nuxt/nuxt.js"
           target="_blank"
           class="button--grey"
-          >GitHub</a
         >
+          GitHub
+        </a>
       </div>
     </div>
   </section>
 </template>
 
-<script>
-import Logo from '~/components/Logo.vue'
+<script lang="ts">
+import { Vue, Component } from 'vue-property-decorator'
 
-export default {
+@Component({
   components: {
-    Logo
+    Logo: () => import('~/components/Logo')
   }
-}
+})
+class IndexPage extends Vue {}
+
+export default IndexPage
 </script>
 
 <style>
