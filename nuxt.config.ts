@@ -4,6 +4,12 @@ import pkg from './package.json'
 const config: NuxtConfiguration = {
   mode: 'universal',
 
+  vue: {
+    config: {
+      productionTip: true,
+    }
+  },
+
   /*
    ** Headers of the page
    */
