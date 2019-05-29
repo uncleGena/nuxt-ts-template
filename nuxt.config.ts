@@ -6,7 +6,7 @@ const config: NuxtConfiguration = {
 
   vue: {
     config: {
-      productionTip: true,
+      productionTip: false,
     }
   },
 
