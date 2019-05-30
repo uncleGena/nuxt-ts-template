@@ -24,7 +24,7 @@ import MyJsClass from '~/assets/js/MyJsClass'
 
 @Component({
   components: {
-    Logo: () => import('~/components/Logo')
+    Logo: () => import('~/components/Logo.vue')
   }
 })
 class IndexPage extends Vue {
