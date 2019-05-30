@@ -1,6 +1,6 @@
 {
   "files": [
-    "vue-shim.d.ts"
+    "shims/vue-shim.d.ts"
   ],
   "compilerOptions": {
     "target": "esnext",
@@ -30,7 +30,8 @@
     },
     "types": [
       "@types/node",
-      "@nuxt/vue-app"
+      "@nuxt/vue-app",
+      "@types/jest"
     ]
   }
 }

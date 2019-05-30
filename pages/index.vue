@@ -11,17 +11,33 @@
           target="_blank"
           class="button--grey"
         ) GitHub
+      br
+      h3 {{ jsClass }}
+      br
+      h3 {{ tsClass }}
 </template>
 
 <script lang="ts">
 import { Vue, Component } from 'vue-property-decorator'
+import MyTsClass from '~/assets/js/MyTsClass'
+import MyJsClass from '~/assets/js/MyJsClass'
 
 @Component({
   components: {
     Logo: () => import('~/components/Logo')
   }
 })
-class IndexPage extends Vue {}
+class IndexPage extends Vue {
+  get jsClass() {
+    const tsCls = new MyTsClass({ lang: 'typescript' })
+    return tsCls.getLang()
+  }
+
+  get tsClass() {
+    const jsClass = new MyJsClass({ lang: 'javascript' })
+    return jsClass.lang
+  }
+}
 
 export default IndexPage
 </script>
